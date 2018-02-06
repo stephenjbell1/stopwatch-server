@@ -1,0 +1,38 @@
+{
+  "initial:before": {
+    "loopback#favicon": {}
+  },
+  "initial": {
+    "compression": {},
+    "cors": {
+      "params": {
+        "origin": true,
+        "credentials": true,
+        "maxAge": 86400
+      }
+    }
+  },
+  "session:before": {
+    "cookie-parser": { "params": "test secret" }
+  },
+  "session": {
+    "express-session": {
+      "params": {
+        "secret": "other test secret",
+        "saveUninitialized": true,
+        "resave": true
+      }
+    }
+  },
+  "parse": {},
+  "routes": {},
+  "files": {
+    "loopback#static": { "params": "$!../client" }
+  },
+  "final": {
+    "loopback#urlNotFound": {}
+  },
+  "final:after": {
+    "errorhandler": {}
+  }
+}
