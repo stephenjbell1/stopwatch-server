@@ -24,10 +24,14 @@
       }
     }
   },
-  "parse": {},
-  "routes": {},
+  "parse": {
+  },
+  "routes": {
+  },
   "files": {
-    "loopback#static": { "params": "$!../client" }
+    "loopback#static": {
+      "params": "$!../client"
+    }
   },
   "final": {
     "loopback#urlNotFound": {}

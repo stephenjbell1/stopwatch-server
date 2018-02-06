@@ -1,19 +1,18 @@
 {
-  "name": "Grape",
-  "plural": "Grapes",
+  "name": "Time",
+  "plural": "Times",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "grape": {
-      "type": "string",
+    "time": {
+      "type": "number",
       "required": true
     },
     "tag": {
-      "type": "string",
-      "required": true
+      "type": "string"
     }
   },
   "validations": [],
@@ -34,10 +33,10 @@
     {
       "accessType": "EXECUTE",
       "principalType": "ROLE",
-      "principalId": "$unauthenticated",
+      "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": "create"
     }
   ],
-  "methods": {}
+  "methods": []
 }
